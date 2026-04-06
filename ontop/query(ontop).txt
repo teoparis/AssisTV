@@ -1,0 +1,22 @@
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+
+PREFIX t: <https://www.w3.org/2006/time#>
+
+
+PREFIX : <http://www.semanticweb.org/teo/ontologies/2020/0/AssisTV#>
+PREFIX g: <http://www.semanticweb.org/teo/ontologies/2020/0/AssisTV/mappings#>
+
+SELECT ?Nome ?Descrizione ?ha_durata ?ha_minuti ?ha_ora ?è_trasmesso_il ?è_trasmesso_su ?ha_visto_censura
+
+	WHERE {  ?Nome :Descrizione ?Descrizione. 
+		?Nome :ha_durata ?ha_durata. 
+		?Nome :ha_m ?ha_minuti. 
+		?Nome :ha_o ?ha_ora. 
+		?Nome :è_trasmesso_su ?è_trasmesso_su. 
+		?Nome :è_trasmesso_il ?è_trasmesso_il. 
+		?Nome :ha_visto_censura ?ha_visto_censura. }
+
+
