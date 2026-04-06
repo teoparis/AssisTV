@@ -32,12 +32,12 @@ The system uses **OBDA (Ontology-Based Data Access)** via [Ontop](https://ontop-
 
 ## Tech Stack
 
-- **OWL 2** (Web Ontology Language) — knowledge representation
-- **Ontop** — OBDA / virtual knowledge graph engine
-- **R2RML** — relational-to-RDF mapping language
-- **SPARQL** — query language for the knowledge graph
-- **Turtle** (`.ttl`) — RDF serialization format
-- **HTML/CSS** — web interface
+- **OWL 2** (Web Ontology Language): knowledge representation
+- **Ontop**: OBDA / virtual knowledge graph engine
+- **R2RML**: relational-to-RDF mapping language
+- **SPARQL**: query language for the knowledge graph
+- **Turtle** (`.ttl`): RDF serialization format
+- **HTML/CSS**: web interface
 
 ## Run
 
@@ -47,4 +47,4 @@ The system uses **OBDA (Ontology-Based Data Access)** via [Ontop](https://ontop-
 
 ---
 
-*University project — Knowledge Engineering / Semantic Web, 2021*
+*University project, Knowledge Engineering / Semantic Web, 2021*
