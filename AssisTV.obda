@@ -1,0 +1,70 @@
+[PrefixDeclaration]
+:		http://www.semanticweb.org/teo/ontologies/2020/0/untitled-ontology-18#
+dc:		http://purl.org/dc/elements/1.1/
+owl:		http://www.w3.org/2002/07/owl#
+rdf:		http://www.w3.org/1999/02/22-rdf-syntax-ns#
+xml:		http://www.w3.org/XML/1998/namespace
+xsd:		http://www.w3.org/2001/XMLSchema#
+obda:		https://w3id.org/obda/vocabulary#
+rdfs:		http://www.w3.org/2000/01/rdf-schema#
+skos:		http://www.w3.org/2004/02/skos/core#
+time:		http://www.w3.org/2006/time#
+vann:		http://www.semanticweb.org/teo/ontologies/2020/0/AssisTV#vann:
+terms:		http://purl.org/dc/terms/
+AssisTV:		http://www.semanticweb.org/teo/ontologies/2020/0/AssisTV#
+cpannotationschema:	http://www.ontologydesignpatterns.org/schemas/cpannotationschema.owl#
+
+[MappingDeclaration] @collection [[
+mappingId	MAPID-80d243147feb4e578378984babee6885
+target		:{nome} a AssisTV:Film ; AssisTV:ha_durata {durata} ; AssisTV:ha_m {minuti} ; AssisTV:ha_o {ora} ; AssisTV:Descrizione {descrzione} ; AssisTV:è_trasmesso_su :{è_trasmesso_su} ; AssisTV:è_trasmesso_il :{è_trasmesso_il} ; AssisTV:ha_visto_censura :{ha_visto_censura} . 
+source		select `nome`, `descrzione`, `durata`, `minuti`, `ora`, `è_trasmesso_il`, `è_trasmesso_su`, `ha_visto_censura` from `assistv`.`programmi` where categoria='Film'
+
+mappingId	MAPID-80d243147feb4e578378984babee6885(0)
+target		:{nome} a AssisTV:Motori ; AssisTV:ha_durata {durata} ; AssisTV:ha_m {minuti} ; AssisTV:ha_o {ora} ; AssisTV:Descrizione {descrzione} ; AssisTV:è_trasmesso_su :{è_trasmesso_su} ; AssisTV:è_trasmesso_il :{è_trasmesso_il} ; AssisTV:ha_visto_censura :{ha_visto_censura} . 
+source		select `nome`, `descrzione`, `durata`, `minuti`, `ora`, `è_trasmesso_il`, `è_trasmesso_su`, `ha_visto_censura` from `assistv`.`programmi` where categoria='Motori'
+
+mappingId	MAPID-80d243147feb4e578378984babee6885(0)(0)
+target		:{nome} a AssisTV:Serie_televisive ; AssisTV:ha_durata {durata} ; AssisTV:ha_m {minuti} ; AssisTV:ha_o {ora} ; AssisTV:Descrizione {descrzione} ; AssisTV:è_trasmesso_su :{è_trasmesso_su} ; AssisTV:è_trasmesso_il :{è_trasmesso_il} ; AssisTV:ha_visto_censura :{ha_visto_censura} . 
+source		select `nome`, `descrzione`, `durata`, `minuti`, `ora`, `è_trasmesso_il`, `è_trasmesso_su`, `ha_visto_censura` from `assistv`.`programmi` where categoria='Serie_televisive'
+
+mappingId	MAPID-80d243147feb4e578378984babee6885(0)(0)(0)
+target		:{nome} a AssisTV:Animazione ; AssisTV:ha_durata {durata} ; AssisTV:ha_m {minuti} ; AssisTV:ha_o {ora} ; AssisTV:Descrizione {descrzione} ; AssisTV:è_trasmesso_su :{è_trasmesso_su} ; AssisTV:è_trasmesso_il :{è_trasmesso_il} ; AssisTV:ha_visto_censura :{ha_visto_censura} . 
+source		select `nome`, `descrzione`, `durata`, `minuti`, `ora`, `è_trasmesso_il`, `è_trasmesso_su`, `ha_visto_censura` from `assistv`.`programmi` where categoria='Animazione'
+
+mappingId	MAPID-80d243147feb4e578378984babee6885(0)(0)(0)(0)
+target		:{nome} a AssisTV:Documentari ; AssisTV:ha_durata {durata} ; AssisTV:ha_m {minuti} ; AssisTV:ha_o {ora} ; AssisTV:Descrizione {descrzione} ; AssisTV:è_trasmesso_su :{è_trasmesso_su} ; AssisTV:è_trasmesso_il :{è_trasmesso_il} ; AssisTV:ha_visto_censura :{ha_visto_censura} . 
+source		select `nome`, `descrzione`, `durata`, `minuti`, `ora`, `è_trasmesso_il`, `è_trasmesso_su`, `ha_visto_censura` from `assistv`.`programmi` where categoria='Documentari'
+
+mappingId	MAPID-80d243147feb4e578378984babee6885(0)(0)(0)(0)(0)
+target		:{nome} a AssisTV:Calcio_e_Sport ; AssisTV:ha_durata {durata} ; AssisTV:ha_m {minuti} ; AssisTV:ha_o {ora} ; AssisTV:Descrizione {descrzione} ; AssisTV:è_trasmesso_su :{è_trasmesso_su} ; AssisTV:è_trasmesso_il :{è_trasmesso_il} ; AssisTV:ha_visto_censura :{ha_visto_censura} . 
+source		select `nome`, `descrzione`, `durata`, `minuti`, `ora`, `è_trasmesso_il`, `è_trasmesso_su`, `ha_visto_censura` from `assistv`.`programmi` where categoria='Calcio_e_Sport'
+
+mappingId	MAPID-80d243147feb4e578378984babee6885(0)(0)(0)(0)(0)(0)
+target		:{nome} a AssisTV:Attualità_e_Inchiesta ; AssisTV:ha_durata {durata} ; AssisTV:ha_m {minuti} ; AssisTV:ha_o {ora} ; AssisTV:Descrizione {descrzione} ; AssisTV:è_trasmesso_su :{è_trasmesso_su} ; AssisTV:è_trasmesso_il :{è_trasmesso_il} ; AssisTV:ha_visto_censura :{ha_visto_censura} . 
+source		select `nome`, `descrzione`, `durata`, `minuti`, `ora`, `è_trasmesso_il`, `è_trasmesso_su`, `ha_visto_censura` from `assistv`.`programmi` where categoria='Attualità_e_Inchiesta'
+
+mappingId	MAPID-80d243147feb4e578378984babee6885(0)(0)(0)(0)(0)(0)(0)
+target		:{nome} a AssisTV:News_e_Approfondimento ; AssisTV:ha_durata {durata} ; AssisTV:ha_m {minuti} ; AssisTV:ha_o {ora} ; AssisTV:Descrizione {descrzione} ; AssisTV:è_trasmesso_su :{è_trasmesso_su} ; AssisTV:è_trasmesso_il :{è_trasmesso_il} ; AssisTV:ha_visto_censura :{ha_visto_censura} . 
+source		select `nome`, `descrzione`, `durata`, `minuti`, `ora`, `è_trasmesso_il`, `è_trasmesso_su`, `ha_visto_censura` from `assistv`.`programmi` where categoria='News_e_Approfondimento'
+
+mappingId	MAPID-80d243147feb4e578378984babee6885(0)(0)(0)(0)(0)(0)(0)(0)
+target		:{nome} a AssisTV:comic_show ; AssisTV:ha_durata {durata} ; AssisTV:ha_m {minuti} ; AssisTV:ha_o {ora} ; AssisTV:Descrizione {descrzione} ; AssisTV:è_trasmesso_su :{è_trasmesso_su} ; AssisTV:è_trasmesso_il :{è_trasmesso_il} ; AssisTV:ha_visto_censura :{ha_visto_censura} . 
+source		select `nome`, `descrzione`, `durata`, `minuti`, `ora`, `è_trasmesso_il`, `è_trasmesso_su`, `ha_visto_censura` from `assistv`.`programmi` where categoria='comic_show'
+
+mappingId	MAPID-80d243147feb4e578378984babee6885(0)(0)(0)(0)(0)(0)(0)(0)(0)
+target		:{nome} a AssisTV:game_show ; AssisTV:ha_durata {durata} ; AssisTV:ha_m {minuti} ; AssisTV:ha_o {ora} ; AssisTV:Descrizione {descrzione} ; AssisTV:è_trasmesso_su :{è_trasmesso_su} ; AssisTV:è_trasmesso_il :{è_trasmesso_il} ; AssisTV:ha_visto_censura :{ha_visto_censura} . 
+source		select `nome`, `descrzione`, `durata`, `minuti`, `ora`, `è_trasmesso_il`, `è_trasmesso_su`, `ha_visto_censura` from `assistv`.`programmi` where categoria='game_show'
+
+mappingId	MAPID-80d243147feb4e578378984babee6885(0)(0)(0)(0)(0)(0)(0)(0)(0)(0)
+target		:{nome} a AssisTV:reality_show ; AssisTV:ha_durata {durata} ; AssisTV:ha_m {minuti} ; AssisTV:ha_o {ora} ; AssisTV:Descrizione {descrzione} ; AssisTV:è_trasmesso_su :{è_trasmesso_su} ; AssisTV:è_trasmesso_il :{è_trasmesso_il} ; AssisTV:ha_visto_censura :{ha_visto_censura} . 
+source		select `nome`, `descrzione`, `durata`, `minuti`, `ora`, `è_trasmesso_il`, `è_trasmesso_su`, `ha_visto_censura` from `assistv`.`programmi` where categoria='reality_show'
+
+mappingId	MAPID-80d243147feb4e578378984babee6885(0)(0)(0)(0)(0)(0)(0)(0)(0)(0)(0)
+target		:{nome} a AssisTV:talent_show ; AssisTV:ha_durata {durata} ; AssisTV:ha_m {minuti} ; AssisTV:ha_o {ora} ; AssisTV:Descrizione {descrzione} ; AssisTV:è_trasmesso_su :{è_trasmesso_su} ; AssisTV:è_trasmesso_il :{è_trasmesso_il} ; AssisTV:ha_visto_censura :{ha_visto_censura} . 
+source		select `nome`, `descrzione`, `durata`, `minuti`, `ora`, `è_trasmesso_il`, `è_trasmesso_su`, `ha_visto_censura` from `assistv`.`programmi` where categoria='talent_show'
+
+mappingId	MAPID-80d243147feb4e578378984babee6885(0)(0)(0)(0)(0)(0)(0)(0)(0)(0)(0)(0)
+target		:{nome} a AssisTV:talk_show ; AssisTV:ha_durata {durata} ; AssisTV:ha_m {minuti} ; AssisTV:ha_o {ora} ; AssisTV:Descrizione {descrzione} ; AssisTV:è_trasmesso_su :{è_trasmesso_su} ; AssisTV:è_trasmesso_il :{è_trasmesso_il} ; AssisTV:ha_visto_censura :{ha_visto_censura} . 
+source		select `nome`, `descrzione`, `durata`, `minuti`, `ora`, `è_trasmesso_il`, `è_trasmesso_su`, `ha_visto_censura` from `assistv`.`programmi` where categoria='talk_show'
+]]
+
