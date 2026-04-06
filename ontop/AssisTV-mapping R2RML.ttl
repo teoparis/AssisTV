@@ -1,0 +1,821 @@
+@prefix rr:    <http://www.w3.org/ns/r2rml#> .
+@prefix :      <http://www.semanticweb.org/teo/ontologies/2020/0/untitled-ontology-18#> .
+@prefix obda:  <https://w3id.org/obda/vocabulary#> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix cpannotationschema: <http://www.ontologydesignpatterns.org/schemas/cpannotationschema.owl#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix AssisTV: <http://www.semanticweb.org/teo/ontologies/2020/0/AssisTV#> .
+@prefix terms: <http://purl.org/dc/terms/> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml:   <http://www.w3.org/XML/1998/namespace> .
+@prefix time:  <http://www.w3.org/2006/time#> .
+@prefix vann:  <http://www.semanticweb.org/teo/ontologies/2020/0/AssisTV#vann:> .
+@prefix dc:    <http://purl.org/dc/elements/1.1/> .
+
+<urn:MAPID-80d243147feb4e578378984babee6885(0)(0)(0)_1>
+        a                      rr:TriplesMap ;
+        rr:logicalTable        [ a            rr:R2RMLView ;
+                                 rr:sqlQuery  "select `nome`, `descrzione`, `durata`, `minuti`, `ora`, `è_trasmesso_il`, `è_trasmesso_su`, `ha_visto_censura` from `assistv`.`programmi` where categoria='Animazione'"
+                               ] ;
+        rr:predicateObjectMap  [ a             rr:PredicateObjectMap ;
+                                 rr:objectMap  [ a            rr:TermMap , rr:ObjectMap ;
+                                                 rr:column    "ora" ;
+                                                 rr:termType  rr:Literal
+                                               ] ;
+                                 rr:predicate  AssisTV:ha_o
+                               ] ;
+        rr:predicateObjectMap  [ a             rr:PredicateObjectMap ;
+                                 rr:objectMap  [ a            rr:TermMap , rr:ObjectMap ;
+                                                 rr:column    "descrzione" ;
+                                                 rr:datatype  xsd:string ;
+                                                 rr:termType  rr:Literal
+                                               ] ;
+                                 rr:predicate  AssisTV:Descrizione
+                               ] ;
+        rr:predicateObjectMap  [ a             rr:PredicateObjectMap ;
+                                 rr:objectMap  [ a            rr:ObjectMap , rr:TermMap ;
+                                                 rr:template  "http://www.semanticweb.org/teo/ontologies/2020/0/untitled-ontology-18#{è_trasmesso_il}" ;
+                                                 rr:termType  rr:IRI
+                                               ] ;
+                                 rr:predicate  AssisTV:è_trasmesso_il
+                               ] ;
+        rr:predicateObjectMap  [ a             rr:PredicateObjectMap ;
+                                 rr:objectMap  [ a            rr:ObjectMap , rr:TermMap ;
+                                                 rr:column    "minuti" ;
+                                                 rr:termType  rr:Literal
+                                               ] ;
+                                 rr:predicate  AssisTV:ha_m
+                               ] ;
+        rr:predicateObjectMap  [ a             rr:PredicateObjectMap ;
+                                 rr:objectMap  [ a            rr:ObjectMap , rr:TermMap ;
+                                                 rr:template  "http://www.semanticweb.org/teo/ontologies/2020/0/untitled-ontology-18#{ha_visto_censura}" ;
+                                                 rr:termType  rr:IRI
+                                               ] ;
+                                 rr:predicate  AssisTV:ha_visto_censura
+                               ] ;
+        rr:predicateObjectMap  [ a             rr:PredicateObjectMap ;
+                                 rr:objectMap  [ a            rr:TermMap , rr:ObjectMap ;
+                                                 rr:column    "durata" ;
+                                                 rr:datatype  xsd:integer ;
+                                                 rr:termType  rr:Literal
+                                               ] ;
+                                 rr:predicate  AssisTV:ha_durata
+                               ] ;
+        rr:predicateObjectMap  [ a             rr:PredicateObjectMap ;
+                                 rr:objectMap  [ a            rr:ObjectMap , rr:TermMap ;
+                                                 rr:template  "http://www.semanticweb.org/teo/ontologies/2020/0/untitled-ontology-18#{è_trasmesso_su}" ;
+                                                 rr:termType  rr:IRI
+                                               ] ;
+                                 rr:predicate  AssisTV:è_trasmesso_su
+                               ] ;
+        rr:subjectMap          [ a            rr:TermMap , rr:SubjectMap ;
+                                 rr:class     AssisTV:Animazione ;
+                                 rr:template  "http://www.semanticweb.org/teo/ontologies/2020/0/untitled-ontology-18#{nome}" ;
+                                 rr:termType  rr:IRI
+                               ] .
+
+<urn:MAPID-80d243147feb4e578378984babee6885(0)_1>
+        a                      rr:TriplesMap ;
+        rr:logicalTable        [ a            rr:R2RMLView ;
+                                 rr:sqlQuery  "select `nome`, `descrzione`, `durata`, `minuti`, `ora`, `è_trasmesso_il`, `è_trasmesso_su`, `ha_visto_censura` from `assistv`.`programmi` where categoria='Motori'"
+                               ] ;
+        rr:predicateObjectMap  [ a             rr:PredicateObjectMap ;
+                                 rr:objectMap  [ a            rr:ObjectMap , rr:TermMap ;
+                                                 rr:column    "descrzione" ;
+                                                 rr:datatype  xsd:string ;
+                                                 rr:termType  rr:Literal
+                                               ] ;
+                                 rr:predicate  AssisTV:Descrizione
+                               ] ;
+        rr:predicateObjectMap  [ a             rr:PredicateObjectMap ;
+                                 rr:objectMap  [ a            rr:ObjectMap , rr:TermMap ;
+                                                 rr:template  "http://www.semanticweb.org/teo/ontologies/2020/0/untitled-ontology-18#{è_trasmesso_il}" ;
+                                                 rr:termType  rr:IRI
+                                               ] ;
+                                 rr:predicate  AssisTV:è_trasmesso_il
+                               ] ;
+        rr:predicateObjectMap  [ a             rr:PredicateObjectMap ;
+                                 rr:objectMap  [ a            rr:ObjectMap , rr:TermMap ;
+                                                 rr:column    "minuti" ;
+                                                 rr:termType  rr:Literal
+                                               ] ;
+                                 rr:predicate  AssisTV:ha_m
+                               ] ;
+        rr:predicateObjectMap  [ a             rr:PredicateObjectMap ;
+                                 rr:objectMap  [ a            rr:TermMap , rr:ObjectMap ;
+                                                 rr:column    "ora" ;
+                                                 rr:termType  rr:Literal
+                                               ] ;
+                                 rr:predicate  AssisTV:ha_o
+                               ] ;
+        rr:predicateObjectMap  [ a             rr:PredicateObjectMap ;
+                                 rr:objectMap  [ a            rr:TermMap , rr:ObjectMap ;
+                                                 rr:template  "http://www.semanticweb.org/teo/ontologies/2020/0/untitled-ontology-18#{è_trasmesso_su}" ;
+                                                 rr:termType  rr:IRI
+                                               ] ;
+                                 rr:predicate  AssisTV:è_trasmesso_su
+                               ] ;
+        rr:predicateObjectMap  [ a             rr:PredicateObjectMap ;
+                                 rr:objectMap  [ a            rr:ObjectMap , rr:TermMap ;
+                                                 rr:template  "http://www.semanticweb.org/teo/ontologies/2020/0/untitled-ontology-18#{ha_visto_censura}" ;
+                                                 rr:termType  rr:IRI
+                                               ] ;
+                                 rr:predicate  AssisTV:ha_visto_censura
+                               ] ;
+        rr:predicateObjectMap  [ a             rr:PredicateObjectMap ;
+                                 rr:objectMap  [ a            rr:ObjectMap , rr:TermMap ;
+                                                 rr:column    "durata" ;
+                                                 rr:datatype  xsd:integer ;
+                                                 rr:termType  rr:Literal
+                                               ] ;
+                                 rr:predicate  AssisTV:ha_durata
+                               ] ;
+        rr:subjectMap          [ a            rr:TermMap , rr:SubjectMap ;
+                                 rr:class     AssisTV:Motori ;
+                                 rr:template  "http://www.semanticweb.org/teo/ontologies/2020/0/untitled-ontology-18#{nome}" ;
+                                 rr:termType  rr:IRI
+                               ] .
+
+<urn:MAPID-80d243147feb4e578378984babee6885(0)(0)(0)(0)(0)(0)(0)(0)_1>
+        a                      rr:TriplesMap ;
+        rr:logicalTable        [ a            rr:R2RMLView ;
+                                 rr:sqlQuery  "select `nome`, `descrzione`, `durata`, `minuti`, `ora`, `è_trasmesso_il`, `è_trasmesso_su`, `ha_visto_censura` from `assistv`.`programmi` where categoria='comic_show'"
+                               ] ;
+        rr:predicateObjectMap  [ a             rr:PredicateObjectMap ;
+                                 rr:objectMap  [ a            rr:ObjectMap , rr:TermMap ;
+                                                 rr:template  "http://www.semanticweb.org/teo/ontologies/2020/0/untitled-ontology-18#{è_trasmesso_il}" ;
+                                                 rr:termType  rr:IRI
+                                               ] ;
+                                 rr:predicate  AssisTV:è_trasmesso_il
+                               ] ;
+        rr:predicateObjectMap  [ a             rr:PredicateObjectMap ;
+                                 rr:objectMap  [ a            rr:TermMap , rr:ObjectMap ;
+                                                 rr:template  "http://www.semanticweb.org/teo/ontologies/2020/0/untitled-ontology-18#{è_trasmesso_su}" ;
+                                                 rr:termType  rr:IRI
+                                               ] ;
+                                 rr:predicate  AssisTV:è_trasmesso_su
+                               ] ;
+        rr:predicateObjectMap  [ a             rr:PredicateObjectMap ;
+                                 rr:objectMap  [ a            rr:ObjectMap , rr:TermMap ;
+                                                 rr:column    "ora" ;
+                                                 rr:termType  rr:Literal
+                                               ] ;
+                                 rr:predicate  AssisTV:ha_o
+                               ] ;
+        rr:predicateObjectMap  [ a             rr:PredicateObjectMap ;
+                                 rr:objectMap  [ a            rr:TermMap , rr:ObjectMap ;
+                                                 rr:template  "http://www.semanticweb.org/teo/ontologies/2020/0/untitled-ontology-18#{ha_visto_censura}" ;
+                                                 rr:termType  rr:IRI
+                                               ] ;
+                                 rr:predicate  AssisTV:ha_visto_censura
+                               ] ;
+        rr:predicateObjectMap  [ a             rr:PredicateObjectMap ;
+                                 rr:objectMap  [ a            rr:TermMap , rr:ObjectMap ;
+                                                 rr:column    "descrzione" ;
+                                                 rr:datatype  xsd:string ;
+                                                 rr:termType  rr:Literal
+                                               ] ;
+                                 rr:predicate  AssisTV:Descrizione
+                               ] ;
+        rr:predicateObjectMap  [ a             rr:PredicateObjectMap ;
+                                 rr:objectMap  [ a            rr:TermMap , rr:ObjectMap ;
+                                                 rr:column    "minuti" ;
+                                                 rr:termType  rr:Literal
+                                               ] ;
+                                 rr:predicate  AssisTV:ha_m
+                               ] ;
+        rr:predicateObjectMap  [ a             rr:PredicateObjectMap ;
+                                 rr:objectMap  [ a            rr:TermMap , rr:ObjectMap ;
+                                                 rr:column    "durata" ;
+                                                 rr:datatype  xsd:integer ;
+                                                 rr:termType  rr:Literal
+                                               ] ;
+                                 rr:predicate  AssisTV:ha_durata
+                               ] ;
+        rr:subjectMap          [ a            rr:TermMap , rr:SubjectMap ;
+                                 rr:class     AssisTV:comic_show ;
+                                 rr:template  "http://www.semanticweb.org/teo/ontologies/2020/0/untitled-ontology-18#{nome}" ;
+                                 rr:termType  rr:IRI
+                               ] .
+
+<urn:MAPID-80d243147feb4e578378984babee6885(0)(0)(0)(0)(0)(0)(0)(0)(0)(0)_1>
+        a                      rr:TriplesMap ;
+        rr:logicalTable        [ a            rr:R2RMLView ;
+                                 rr:sqlQuery  "select `nome`, `descrzione`, `durata`, `minuti`, `ora`, `è_trasmesso_il`, `è_trasmesso_su`, `ha_visto_censura` from `assistv`.`programmi` where categoria='reality_show'"
+                               ] ;
+        rr:predicateObjectMap  [ a             rr:PredicateObjectMap ;
+                                 rr:objectMap  [ a            rr:TermMap , rr:ObjectMap ;
+                                                 rr:column    "minuti" ;
+                                                 rr:termType  rr:Literal
+                                               ] ;
+                                 rr:predicate  AssisTV:ha_m
+                               ] ;
+        rr:predicateObjectMap  [ a             rr:PredicateObjectMap ;
+                                 rr:objectMap  [ a            rr:TermMap , rr:ObjectMap ;
+                                                 rr:column    "ora" ;
+                                                 rr:termType  rr:Literal
+                                               ] ;
+                                 rr:predicate  AssisTV:ha_o
+                               ] ;
+        rr:predicateObjectMap  [ a             rr:PredicateObjectMap ;
+                                 rr:objectMap  [ a            rr:TermMap , rr:ObjectMap ;
+                                                 rr:column    "durata" ;
+                                                 rr:datatype  xsd:integer ;
+                                                 rr:termType  rr:Literal
+                                               ] ;
+                                 rr:predicate  AssisTV:ha_durata
+                               ] ;
+        rr:predicateObjectMap  [ a             rr:PredicateObjectMap ;
+                                 rr:objectMap  [ a            rr:TermMap , rr:ObjectMap ;
+                                                 rr:template  "http://www.semanticweb.org/teo/ontologies/2020/0/untitled-ontology-18#{ha_visto_censura}" ;
+                                                 rr:termType  rr:IRI
+                                               ] ;
+                                 rr:predicate  AssisTV:ha_visto_censura
+                               ] ;
+        rr:predicateObjectMap  [ a             rr:PredicateObjectMap ;
+                                 rr:objectMap  [ a            rr:TermMap , rr:ObjectMap ;
+                                                 rr:template  "http://www.semanticweb.org/teo/ontologies/2020/0/untitled-ontology-18#{è_trasmesso_su}" ;
+                                                 rr:termType  rr:IRI
+                                               ] ;
+                                 rr:predicate  AssisTV:è_trasmesso_su
+                               ] ;
+        rr:predicateObjectMap  [ a             rr:PredicateObjectMap ;
+                                 rr:objectMap  [ a            rr:ObjectMap , rr:TermMap ;
+                                                 rr:template  "http://www.semanticweb.org/teo/ontologies/2020/0/untitled-ontology-18#{è_trasmesso_il}" ;
+                                                 rr:termType  rr:IRI
+                                               ] ;
+                                 rr:predicate  AssisTV:è_trasmesso_il
+                               ] ;
+        rr:predicateObjectMap  [ a             rr:PredicateObjectMap ;
+                                 rr:objectMap  [ a            rr:ObjectMap , rr:TermMap ;
+                                                 rr:column    "descrzione" ;
+                                                 rr:datatype  xsd:string ;
+                                                 rr:termType  rr:Literal
+                                               ] ;
+                                 rr:predicate  AssisTV:Descrizione
+                               ] ;
+        rr:subjectMap          [ a            rr:TermMap , rr:SubjectMap ;
+                                 rr:class     AssisTV:reality_show ;
+                                 rr:template  "http://www.semanticweb.org/teo/ontologies/2020/0/untitled-ontology-18#{nome}" ;
+                                 rr:termType  rr:IRI
+                               ] .
+
+<urn:MAPID-80d243147feb4e578378984babee6885(0)(0)(0)(0)(0)(0)_1>
+        a                      rr:TriplesMap ;
+        rr:logicalTable        [ a            rr:R2RMLView ;
+                                 rr:sqlQuery  "select `nome`, `descrzione`, `durata`, `minuti`, `ora`, `è_trasmesso_il`, `è_trasmesso_su`, `ha_visto_censura` from `assistv`.`programmi` where categoria='Attualità_e_Inchiesta'"
+                               ] ;
+        rr:predicateObjectMap  [ a             rr:PredicateObjectMap ;
+                                 rr:objectMap  [ a            rr:TermMap , rr:ObjectMap ;
+                                                 rr:column    "ora" ;
+                                                 rr:termType  rr:Literal
+                                               ] ;
+                                 rr:predicate  AssisTV:ha_o
+                               ] ;
+        rr:predicateObjectMap  [ a             rr:PredicateObjectMap ;
+                                 rr:objectMap  [ a            rr:TermMap , rr:ObjectMap ;
+                                                 rr:column    "descrzione" ;
+                                                 rr:datatype  xsd:string ;
+                                                 rr:termType  rr:Literal
+                                               ] ;
+                                 rr:predicate  AssisTV:Descrizione
+                               ] ;
+        rr:predicateObjectMap  [ a             rr:PredicateObjectMap ;
+                                 rr:objectMap  [ a            rr:ObjectMap , rr:TermMap ;
+                                                 rr:column    "minuti" ;
+                                                 rr:termType  rr:Literal
+                                               ] ;
+                                 rr:predicate  AssisTV:ha_m
+                               ] ;
+        rr:predicateObjectMap  [ a             rr:PredicateObjectMap ;
+                                 rr:objectMap  [ a            rr:TermMap , rr:ObjectMap ;
+                                                 rr:template  "http://www.semanticweb.org/teo/ontologies/2020/0/untitled-ontology-18#{è_trasmesso_il}" ;
+                                                 rr:termType  rr:IRI
+                                               ] ;
+                                 rr:predicate  AssisTV:è_trasmesso_il
+                               ] ;
+        rr:predicateObjectMap  [ a             rr:PredicateObjectMap ;
+                                 rr:objectMap  [ a            rr:ObjectMap , rr:TermMap ;
+                                                 rr:template  "http://www.semanticweb.org/teo/ontologies/2020/0/untitled-ontology-18#{ha_visto_censura}" ;
+                                                 rr:termType  rr:IRI
+                                               ] ;
+                                 rr:predicate  AssisTV:ha_visto_censura
+                               ] ;
+        rr:predicateObjectMap  [ a             rr:PredicateObjectMap ;
+                                 rr:objectMap  [ a            rr:TermMap , rr:ObjectMap ;
+                                                 rr:column    "durata" ;
+                                                 rr:datatype  xsd:integer ;
+                                                 rr:termType  rr:Literal
+                                               ] ;
+                                 rr:predicate  AssisTV:ha_durata
+                               ] ;
+        rr:predicateObjectMap  [ a             rr:PredicateObjectMap ;
+                                 rr:objectMap  [ a            rr:TermMap , rr:ObjectMap ;
+                                                 rr:template  "http://www.semanticweb.org/teo/ontologies/2020/0/untitled-ontology-18#{è_trasmesso_su}" ;
+                                                 rr:termType  rr:IRI
+                                               ] ;
+                                 rr:predicate  AssisTV:è_trasmesso_su
+                               ] ;
+        rr:subjectMap          [ a            rr:TermMap , rr:SubjectMap ;
+                                 rr:class     AssisTV:Attualità_e_Inchiesta ;
+                                 rr:template  "http://www.semanticweb.org/teo/ontologies/2020/0/untitled-ontology-18#{nome}" ;
+                                 rr:termType  rr:IRI
+                               ] .
+
+<urn:MAPID-80d243147feb4e578378984babee6885_1>
+        a                      rr:TriplesMap ;
+        rr:logicalTable        [ a            rr:R2RMLView ;
+                                 rr:sqlQuery  "select `nome`, `descrzione`, `durata`, `minuti`, `ora`, `è_trasmesso_il`, `è_trasmesso_su`, `ha_visto_censura` from `assistv`.`programmi` where categoria='Film'"
+                               ] ;
+        rr:predicateObjectMap  [ a             rr:PredicateObjectMap ;
+                                 rr:objectMap  [ a            rr:TermMap , rr:ObjectMap ;
+                                                 rr:template  "http://www.semanticweb.org/teo/ontologies/2020/0/untitled-ontology-18#{è_trasmesso_su}" ;
+                                                 rr:termType  rr:IRI
+                                               ] ;
+                                 rr:predicate  AssisTV:è_trasmesso_su
+                               ] ;
+        rr:predicateObjectMap  [ a             rr:PredicateObjectMap ;
+                                 rr:objectMap  [ a            rr:TermMap , rr:ObjectMap ;
+                                                 rr:column    "durata" ;
+                                                 rr:datatype  xsd:integer ;
+                                                 rr:termType  rr:Literal
+                                               ] ;
+                                 rr:predicate  AssisTV:ha_durata
+                               ] ;
+        rr:predicateObjectMap  [ a             rr:PredicateObjectMap ;
+                                 rr:objectMap  [ a            rr:ObjectMap , rr:TermMap ;
+                                                 rr:template  "http://www.semanticweb.org/teo/ontologies/2020/0/untitled-ontology-18#{ha_visto_censura}" ;
+                                                 rr:termType  rr:IRI
+                                               ] ;
+                                 rr:predicate  AssisTV:ha_visto_censura
+                               ] ;
+        rr:predicateObjectMap  [ a             rr:PredicateObjectMap ;
+                                 rr:objectMap  [ a            rr:ObjectMap , rr:TermMap ;
+                                                 rr:template  "http://www.semanticweb.org/teo/ontologies/2020/0/untitled-ontology-18#{è_trasmesso_il}" ;
+                                                 rr:termType  rr:IRI
+                                               ] ;
+                                 rr:predicate  AssisTV:è_trasmesso_il
+                               ] ;
+        rr:predicateObjectMap  [ a             rr:PredicateObjectMap ;
+                                 rr:objectMap  [ a            rr:ObjectMap , rr:TermMap ;
+                                                 rr:column    "descrzione" ;
+                                                 rr:datatype  xsd:string ;
+                                                 rr:termType  rr:Literal
+                                               ] ;
+                                 rr:predicate  AssisTV:Descrizione
+                               ] ;
+        rr:predicateObjectMap  [ a             rr:PredicateObjectMap ;
+                                 rr:objectMap  [ a            rr:TermMap , rr:ObjectMap ;
+                                                 rr:column    "ora" ;
+                                                 rr:termType  rr:Literal
+                                               ] ;
+                                 rr:predicate  AssisTV:ha_o
+                               ] ;
+        rr:predicateObjectMap  [ a             rr:PredicateObjectMap ;
+                                 rr:objectMap  [ a            rr:ObjectMap , rr:TermMap ;
+                                                 rr:column    "minuti" ;
+                                                 rr:termType  rr:Literal
+                                               ] ;
+                                 rr:predicate  AssisTV:ha_m
+                               ] ;
+        rr:subjectMap          [ a            rr:TermMap , rr:SubjectMap ;
+                                 rr:class     AssisTV:Film ;
+                                 rr:template  "http://www.semanticweb.org/teo/ontologies/2020/0/untitled-ontology-18#{nome}" ;
+                                 rr:termType  rr:IRI
+                               ] .
+
+<urn:MAPID-80d243147feb4e578378984babee6885(0)(0)(0)(0)(0)(0)(0)(0)(0)(0)(0)_1>
+        a                      rr:TriplesMap ;
+        rr:logicalTable        [ a            rr:R2RMLView ;
+                                 rr:sqlQuery  "select `nome`, `descrzione`, `durata`, `minuti`, `ora`, `è_trasmesso_il`, `è_trasmesso_su`, `ha_visto_censura` from `assistv`.`programmi` where categoria='talent_show'"
+                               ] ;
+        rr:predicateObjectMap  [ a             rr:PredicateObjectMap ;
+                                 rr:objectMap  [ a            rr:ObjectMap , rr:TermMap ;
+                                                 rr:column    "descrzione" ;
+                                                 rr:datatype  xsd:string ;
+                                                 rr:termType  rr:Literal
+                                               ] ;
+                                 rr:predicate  AssisTV:Descrizione
+                               ] ;
+        rr:predicateObjectMap  [ a             rr:PredicateObjectMap ;
+                                 rr:objectMap  [ a            rr:ObjectMap , rr:TermMap ;
+                                                 rr:column    "minuti" ;
+                                                 rr:termType  rr:Literal
+                                               ] ;
+                                 rr:predicate  AssisTV:ha_m
+                               ] ;
+        rr:predicateObjectMap  [ a             rr:PredicateObjectMap ;
+                                 rr:objectMap  [ a            rr:TermMap , rr:ObjectMap ;
+                                                 rr:template  "http://www.semanticweb.org/teo/ontologies/2020/0/untitled-ontology-18#{è_trasmesso_il}" ;
+                                                 rr:termType  rr:IRI
+                                               ] ;
+                                 rr:predicate  AssisTV:è_trasmesso_il
+                               ] ;
+        rr:predicateObjectMap  [ a             rr:PredicateObjectMap ;
+                                 rr:objectMap  [ a            rr:TermMap , rr:ObjectMap ;
+                                                 rr:column    "ora" ;
+                                                 rr:termType  rr:Literal
+                                               ] ;
+                                 rr:predicate  AssisTV:ha_o
+                               ] ;
+        rr:predicateObjectMap  [ a             rr:PredicateObjectMap ;
+                                 rr:objectMap  [ a            rr:TermMap , rr:ObjectMap ;
+                                                 rr:column    "durata" ;
+                                                 rr:datatype  xsd:integer ;
+                                                 rr:termType  rr:Literal
+                                               ] ;
+                                 rr:predicate  AssisTV:ha_durata
+                               ] ;
+        rr:predicateObjectMap  [ a             rr:PredicateObjectMap ;
+                                 rr:objectMap  [ a            rr:TermMap , rr:ObjectMap ;
+                                                 rr:template  "http://www.semanticweb.org/teo/ontologies/2020/0/untitled-ontology-18#{ha_visto_censura}" ;
+                                                 rr:termType  rr:IRI
+                                               ] ;
+                                 rr:predicate  AssisTV:ha_visto_censura
+                               ] ;
+        rr:predicateObjectMap  [ a             rr:PredicateObjectMap ;
+                                 rr:objectMap  [ a            rr:TermMap , rr:ObjectMap ;
+                                                 rr:template  "http://www.semanticweb.org/teo/ontologies/2020/0/untitled-ontology-18#{è_trasmesso_su}" ;
+                                                 rr:termType  rr:IRI
+                                               ] ;
+                                 rr:predicate  AssisTV:è_trasmesso_su
+                               ] ;
+        rr:subjectMap          [ a            rr:TermMap , rr:SubjectMap ;
+                                 rr:class     AssisTV:talent_show ;
+                                 rr:template  "http://www.semanticweb.org/teo/ontologies/2020/0/untitled-ontology-18#{nome}" ;
+                                 rr:termType  rr:IRI
+                               ] .
+
+<urn:MAPID-80d243147feb4e578378984babee6885(0)(0)(0)(0)_1>
+        a                      rr:TriplesMap ;
+        rr:logicalTable        [ a            rr:R2RMLView ;
+                                 rr:sqlQuery  "select `nome`, `descrzione`, `durata`, `minuti`, `ora`, `è_trasmesso_il`, `è_trasmesso_su`, `ha_visto_censura` from `assistv`.`programmi` where categoria='Documentari'"
+                               ] ;
+        rr:predicateObjectMap  [ a             rr:PredicateObjectMap ;
+                                 rr:objectMap  [ a            rr:TermMap , rr:ObjectMap ;
+                                                 rr:column    "durata" ;
+                                                 rr:datatype  xsd:integer ;
+                                                 rr:termType  rr:Literal
+                                               ] ;
+                                 rr:predicate  AssisTV:ha_durata
+                               ] ;
+        rr:predicateObjectMap  [ a             rr:PredicateObjectMap ;
+                                 rr:objectMap  [ a            rr:TermMap , rr:ObjectMap ;
+                                                 rr:template  "http://www.semanticweb.org/teo/ontologies/2020/0/untitled-ontology-18#{ha_visto_censura}" ;
+                                                 rr:termType  rr:IRI
+                                               ] ;
+                                 rr:predicate  AssisTV:ha_visto_censura
+                               ] ;
+        rr:predicateObjectMap  [ a             rr:PredicateObjectMap ;
+                                 rr:objectMap  [ a            rr:TermMap , rr:ObjectMap ;
+                                                 rr:column    "ora" ;
+                                                 rr:termType  rr:Literal
+                                               ] ;
+                                 rr:predicate  AssisTV:ha_o
+                               ] ;
+        rr:predicateObjectMap  [ a             rr:PredicateObjectMap ;
+                                 rr:objectMap  [ a            rr:TermMap , rr:ObjectMap ;
+                                                 rr:template  "http://www.semanticweb.org/teo/ontologies/2020/0/untitled-ontology-18#{è_trasmesso_il}" ;
+                                                 rr:termType  rr:IRI
+                                               ] ;
+                                 rr:predicate  AssisTV:è_trasmesso_il
+                               ] ;
+        rr:predicateObjectMap  [ a             rr:PredicateObjectMap ;
+                                 rr:objectMap  [ a            rr:ObjectMap , rr:TermMap ;
+                                                 rr:column    "minuti" ;
+                                                 rr:termType  rr:Literal
+                                               ] ;
+                                 rr:predicate  AssisTV:ha_m
+                               ] ;
+        rr:predicateObjectMap  [ a             rr:PredicateObjectMap ;
+                                 rr:objectMap  [ a            rr:ObjectMap , rr:TermMap ;
+                                                 rr:column    "descrzione" ;
+                                                 rr:datatype  xsd:string ;
+                                                 rr:termType  rr:Literal
+                                               ] ;
+                                 rr:predicate  AssisTV:Descrizione
+                               ] ;
+        rr:predicateObjectMap  [ a             rr:PredicateObjectMap ;
+                                 rr:objectMap  [ a            rr:TermMap , rr:ObjectMap ;
+                                                 rr:template  "http://www.semanticweb.org/teo/ontologies/2020/0/untitled-ontology-18#{è_trasmesso_su}" ;
+                                                 rr:termType  rr:IRI
+                                               ] ;
+                                 rr:predicate  AssisTV:è_trasmesso_su
+                               ] ;
+        rr:subjectMap          [ a            rr:TermMap , rr:SubjectMap ;
+                                 rr:class     AssisTV:Documentari ;
+                                 rr:template  "http://www.semanticweb.org/teo/ontologies/2020/0/untitled-ontology-18#{nome}" ;
+                                 rr:termType  rr:IRI
+                               ] .
+
+<urn:MAPID-80d243147feb4e578378984babee6885(0)(0)_1>
+        a                      rr:TriplesMap ;
+        rr:logicalTable        [ a            rr:R2RMLView ;
+                                 rr:sqlQuery  "select `nome`, `descrzione`, `durata`, `minuti`, `ora`, `è_trasmesso_il`, `è_trasmesso_su`, `ha_visto_censura` from `assistv`.`programmi` where categoria='Serie_televisive'"
+                               ] ;
+        rr:predicateObjectMap  [ a             rr:PredicateObjectMap ;
+                                 rr:objectMap  [ a            rr:ObjectMap , rr:TermMap ;
+                                                 rr:template  "http://www.semanticweb.org/teo/ontologies/2020/0/untitled-ontology-18#{è_trasmesso_il}" ;
+                                                 rr:termType  rr:IRI
+                                               ] ;
+                                 rr:predicate  AssisTV:è_trasmesso_il
+                               ] ;
+        rr:predicateObjectMap  [ a             rr:PredicateObjectMap ;
+                                 rr:objectMap  [ a            rr:ObjectMap , rr:TermMap ;
+                                                 rr:column    "descrzione" ;
+                                                 rr:datatype  xsd:string ;
+                                                 rr:termType  rr:Literal
+                                               ] ;
+                                 rr:predicate  AssisTV:Descrizione
+                               ] ;
+        rr:predicateObjectMap  [ a             rr:PredicateObjectMap ;
+                                 rr:objectMap  [ a            rr:TermMap , rr:ObjectMap ;
+                                                 rr:column    "ora" ;
+                                                 rr:termType  rr:Literal
+                                               ] ;
+                                 rr:predicate  AssisTV:ha_o
+                               ] ;
+        rr:predicateObjectMap  [ a             rr:PredicateObjectMap ;
+                                 rr:objectMap  [ a            rr:ObjectMap , rr:TermMap ;
+                                                 rr:template  "http://www.semanticweb.org/teo/ontologies/2020/0/untitled-ontology-18#{ha_visto_censura}" ;
+                                                 rr:termType  rr:IRI
+                                               ] ;
+                                 rr:predicate  AssisTV:ha_visto_censura
+                               ] ;
+        rr:predicateObjectMap  [ a             rr:PredicateObjectMap ;
+                                 rr:objectMap  [ a            rr:ObjectMap , rr:TermMap ;
+                                                 rr:column    "minuti" ;
+                                                 rr:termType  rr:Literal
+                                               ] ;
+                                 rr:predicate  AssisTV:ha_m
+                               ] ;
+        rr:predicateObjectMap  [ a             rr:PredicateObjectMap ;
+                                 rr:objectMap  [ a            rr:ObjectMap , rr:TermMap ;
+                                                 rr:template  "http://www.semanticweb.org/teo/ontologies/2020/0/untitled-ontology-18#{è_trasmesso_su}" ;
+                                                 rr:termType  rr:IRI
+                                               ] ;
+                                 rr:predicate  AssisTV:è_trasmesso_su
+                               ] ;
+        rr:predicateObjectMap  [ a             rr:PredicateObjectMap ;
+                                 rr:objectMap  [ a            rr:TermMap , rr:ObjectMap ;
+                                                 rr:column    "durata" ;
+                                                 rr:datatype  xsd:integer ;
+                                                 rr:termType  rr:Literal
+                                               ] ;
+                                 rr:predicate  AssisTV:ha_durata
+                               ] ;
+        rr:subjectMap          [ a            rr:TermMap , rr:SubjectMap ;
+                                 rr:class     AssisTV:Serie_televisive ;
+                                 rr:template  "http://www.semanticweb.org/teo/ontologies/2020/0/untitled-ontology-18#{nome}" ;
+                                 rr:termType  rr:IRI
+                               ] .
+
+<urn:MAPID-80d243147feb4e578378984babee6885(0)(0)(0)(0)(0)_1>
+        a                      rr:TriplesMap ;
+        rr:logicalTable        [ a            rr:R2RMLView ;
+                                 rr:sqlQuery  "select `nome`, `descrzione`, `durata`, `minuti`, `ora`, `è_trasmesso_il`, `è_trasmesso_su`, `ha_visto_censura` from `assistv`.`programmi` where categoria='Calcio_e_Sport'"
+                               ] ;
+        rr:predicateObjectMap  [ a             rr:PredicateObjectMap ;
+                                 rr:objectMap  [ a            rr:TermMap , rr:ObjectMap ;
+                                                 rr:column    "durata" ;
+                                                 rr:datatype  xsd:integer ;
+                                                 rr:termType  rr:Literal
+                                               ] ;
+                                 rr:predicate  AssisTV:ha_durata
+                               ] ;
+        rr:predicateObjectMap  [ a             rr:PredicateObjectMap ;
+                                 rr:objectMap  [ a            rr:ObjectMap , rr:TermMap ;
+                                                 rr:column    "descrzione" ;
+                                                 rr:datatype  xsd:string ;
+                                                 rr:termType  rr:Literal
+                                               ] ;
+                                 rr:predicate  AssisTV:Descrizione
+                               ] ;
+        rr:predicateObjectMap  [ a             rr:PredicateObjectMap ;
+                                 rr:objectMap  [ a            rr:TermMap , rr:ObjectMap ;
+                                                 rr:template  "http://www.semanticweb.org/teo/ontologies/2020/0/untitled-ontology-18#{è_trasmesso_su}" ;
+                                                 rr:termType  rr:IRI
+                                               ] ;
+                                 rr:predicate  AssisTV:è_trasmesso_su
+                               ] ;
+        rr:predicateObjectMap  [ a             rr:PredicateObjectMap ;
+                                 rr:objectMap  [ a            rr:TermMap , rr:ObjectMap ;
+                                                 rr:column    "ora" ;
+                                                 rr:termType  rr:Literal
+                                               ] ;
+                                 rr:predicate  AssisTV:ha_o
+                               ] ;
+        rr:predicateObjectMap  [ a             rr:PredicateObjectMap ;
+                                 rr:objectMap  [ a            rr:TermMap , rr:ObjectMap ;
+                                                 rr:template  "http://www.semanticweb.org/teo/ontologies/2020/0/untitled-ontology-18#{ha_visto_censura}" ;
+                                                 rr:termType  rr:IRI
+                                               ] ;
+                                 rr:predicate  AssisTV:ha_visto_censura
+                               ] ;
+        rr:predicateObjectMap  [ a             rr:PredicateObjectMap ;
+                                 rr:objectMap  [ a            rr:ObjectMap , rr:TermMap ;
+                                                 rr:column    "minuti" ;
+                                                 rr:termType  rr:Literal
+                                               ] ;
+                                 rr:predicate  AssisTV:ha_m
+                               ] ;
+        rr:predicateObjectMap  [ a             rr:PredicateObjectMap ;
+                                 rr:objectMap  [ a            rr:TermMap , rr:ObjectMap ;
+                                                 rr:template  "http://www.semanticweb.org/teo/ontologies/2020/0/untitled-ontology-18#{è_trasmesso_il}" ;
+                                                 rr:termType  rr:IRI
+                                               ] ;
+                                 rr:predicate  AssisTV:è_trasmesso_il
+                               ] ;
+        rr:subjectMap          [ a            rr:TermMap , rr:SubjectMap ;
+                                 rr:class     AssisTV:Calcio_e_Sport ;
+                                 rr:template  "http://www.semanticweb.org/teo/ontologies/2020/0/untitled-ontology-18#{nome}" ;
+                                 rr:termType  rr:IRI
+                               ] .
+
+<urn:MAPID-80d243147feb4e578378984babee6885(0)(0)(0)(0)(0)(0)(0)(0)(0)(0)(0)(0)_1>
+        a                      rr:TriplesMap ;
+        rr:logicalTable        [ a            rr:R2RMLView ;
+                                 rr:sqlQuery  "select `nome`, `descrzione`, `durata`, `minuti`, `ora`, `è_trasmesso_il`, `è_trasmesso_su`, `ha_visto_censura` from `assistv`.`programmi` where categoria='talk_show'"
+                               ] ;
+        rr:predicateObjectMap  [ a             rr:PredicateObjectMap ;
+                                 rr:objectMap  [ a            rr:TermMap , rr:ObjectMap ;
+                                                 rr:column    "ora" ;
+                                                 rr:termType  rr:Literal
+                                               ] ;
+                                 rr:predicate  AssisTV:ha_o
+                               ] ;
+        rr:predicateObjectMap  [ a             rr:PredicateObjectMap ;
+                                 rr:objectMap  [ a            rr:TermMap , rr:ObjectMap ;
+                                                 rr:template  "http://www.semanticweb.org/teo/ontologies/2020/0/untitled-ontology-18#{ha_visto_censura}" ;
+                                                 rr:termType  rr:IRI
+                                               ] ;
+                                 rr:predicate  AssisTV:ha_visto_censura
+                               ] ;
+        rr:predicateObjectMap  [ a             rr:PredicateObjectMap ;
+                                 rr:objectMap  [ a            rr:TermMap , rr:ObjectMap ;
+                                                 rr:template  "http://www.semanticweb.org/teo/ontologies/2020/0/untitled-ontology-18#{è_trasmesso_il}" ;
+                                                 rr:termType  rr:IRI
+                                               ] ;
+                                 rr:predicate  AssisTV:è_trasmesso_il
+                               ] ;
+        rr:predicateObjectMap  [ a             rr:PredicateObjectMap ;
+                                 rr:objectMap  [ a            rr:ObjectMap , rr:TermMap ;
+                                                 rr:column    "minuti" ;
+                                                 rr:termType  rr:Literal
+                                               ] ;
+                                 rr:predicate  AssisTV:ha_m
+                               ] ;
+        rr:predicateObjectMap  [ a             rr:PredicateObjectMap ;
+                                 rr:objectMap  [ a            rr:TermMap , rr:ObjectMap ;
+                                                 rr:column    "durata" ;
+                                                 rr:datatype  xsd:integer ;
+                                                 rr:termType  rr:Literal
+                                               ] ;
+                                 rr:predicate  AssisTV:ha_durata
+                               ] ;
+        rr:predicateObjectMap  [ a             rr:PredicateObjectMap ;
+                                 rr:objectMap  [ a            rr:ObjectMap , rr:TermMap ;
+                                                 rr:column    "descrzione" ;
+                                                 rr:datatype  xsd:string ;
+                                                 rr:termType  rr:Literal
+                                               ] ;
+                                 rr:predicate  AssisTV:Descrizione
+                               ] ;
+        rr:predicateObjectMap  [ a             rr:PredicateObjectMap ;
+                                 rr:objectMap  [ a            rr:ObjectMap , rr:TermMap ;
+                                                 rr:template  "http://www.semanticweb.org/teo/ontologies/2020/0/untitled-ontology-18#{è_trasmesso_su}" ;
+                                                 rr:termType  rr:IRI
+                                               ] ;
+                                 rr:predicate  AssisTV:è_trasmesso_su
+                               ] ;
+        rr:subjectMap          [ a            rr:TermMap , rr:SubjectMap ;
+                                 rr:class     AssisTV:talk_show ;
+                                 rr:template  "http://www.semanticweb.org/teo/ontologies/2020/0/untitled-ontology-18#{nome}" ;
+                                 rr:termType  rr:IRI
+                               ] .
+
+<urn:MAPID-80d243147feb4e578378984babee6885(0)(0)(0)(0)(0)(0)(0)(0)(0)_1>
+        a                      rr:TriplesMap ;
+        rr:logicalTable        [ a            rr:R2RMLView ;
+                                 rr:sqlQuery  "select `nome`, `descrzione`, `durata`, `minuti`, `ora`, `è_trasmesso_il`, `è_trasmesso_su`, `ha_visto_censura` from `assistv`.`programmi` where categoria='game_show'"
+                               ] ;
+        rr:predicateObjectMap  [ a             rr:PredicateObjectMap ;
+                                 rr:objectMap  [ a            rr:ObjectMap , rr:TermMap ;
+                                                 rr:template  "http://www.semanticweb.org/teo/ontologies/2020/0/untitled-ontology-18#{è_trasmesso_il}" ;
+                                                 rr:termType  rr:IRI
+                                               ] ;
+                                 rr:predicate  AssisTV:è_trasmesso_il
+                               ] ;
+        rr:predicateObjectMap  [ a             rr:PredicateObjectMap ;
+                                 rr:objectMap  [ a            rr:TermMap , rr:ObjectMap ;
+                                                 rr:template  "http://www.semanticweb.org/teo/ontologies/2020/0/untitled-ontology-18#{è_trasmesso_su}" ;
+                                                 rr:termType  rr:IRI
+                                               ] ;
+                                 rr:predicate  AssisTV:è_trasmesso_su
+                               ] ;
+        rr:predicateObjectMap  [ a             rr:PredicateObjectMap ;
+                                 rr:objectMap  [ a            rr:ObjectMap , rr:TermMap ;
+                                                 rr:column    "descrzione" ;
+                                                 rr:datatype  xsd:string ;
+                                                 rr:termType  rr:Literal
+                                               ] ;
+                                 rr:predicate  AssisTV:Descrizione
+                               ] ;
+        rr:predicateObjectMap  [ a             rr:PredicateObjectMap ;
+                                 rr:objectMap  [ a            rr:TermMap , rr:ObjectMap ;
+                                                 rr:template  "http://www.semanticweb.org/teo/ontologies/2020/0/untitled-ontology-18#{ha_visto_censura}" ;
+                                                 rr:termType  rr:IRI
+                                               ] ;
+                                 rr:predicate  AssisTV:ha_visto_censura
+                               ] ;
+        rr:predicateObjectMap  [ a             rr:PredicateObjectMap ;
+                                 rr:objectMap  [ a            rr:TermMap , rr:ObjectMap ;
+                                                 rr:column    "ora" ;
+                                                 rr:termType  rr:Literal
+                                               ] ;
+                                 rr:predicate  AssisTV:ha_o
+                               ] ;
+        rr:predicateObjectMap  [ a             rr:PredicateObjectMap ;
+                                 rr:objectMap  [ a            rr:TermMap , rr:ObjectMap ;
+                                                 rr:column    "minuti" ;
+                                                 rr:termType  rr:Literal
+                                               ] ;
+                                 rr:predicate  AssisTV:ha_m
+                               ] ;
+        rr:predicateObjectMap  [ a             rr:PredicateObjectMap ;
+                                 rr:objectMap  [ a            rr:TermMap , rr:ObjectMap ;
+                                                 rr:column    "durata" ;
+                                                 rr:datatype  xsd:integer ;
+                                                 rr:termType  rr:Literal
+                                               ] ;
+                                 rr:predicate  AssisTV:ha_durata
+                               ] ;
+        rr:subjectMap          [ a            rr:SubjectMap , rr:TermMap ;
+                                 rr:class     AssisTV:game_show ;
+                                 rr:template  "http://www.semanticweb.org/teo/ontologies/2020/0/untitled-ontology-18#{nome}" ;
+                                 rr:termType  rr:IRI
+                               ] .
+
+<urn:MAPID-80d243147feb4e578378984babee6885(0)(0)(0)(0)(0)(0)(0)_1>
+        a                      rr:TriplesMap ;
+        rr:logicalTable        [ a            rr:R2RMLView ;
+                                 rr:sqlQuery  "select `nome`, `descrzione`, `durata`, `minuti`, `ora`, `è_trasmesso_il`, `è_trasmesso_su`, `ha_visto_censura` from `assistv`.`programmi` where categoria='News_e_Approfondimento'"
+                               ] ;
+        rr:predicateObjectMap  [ a             rr:PredicateObjectMap ;
+                                 rr:objectMap  [ a            rr:TermMap , rr:ObjectMap ;
+                                                 rr:template  "http://www.semanticweb.org/teo/ontologies/2020/0/untitled-ontology-18#{è_trasmesso_il}" ;
+                                                 rr:termType  rr:IRI
+                                               ] ;
+                                 rr:predicate  AssisTV:è_trasmesso_il
+                               ] ;
+        rr:predicateObjectMap  [ a             rr:PredicateObjectMap ;
+                                 rr:objectMap  [ a            rr:TermMap , rr:ObjectMap ;
+                                                 rr:column    "descrzione" ;
+                                                 rr:datatype  xsd:string ;
+                                                 rr:termType  rr:Literal
+                                               ] ;
+                                 rr:predicate  AssisTV:Descrizione
+                               ] ;
+        rr:predicateObjectMap  [ a             rr:PredicateObjectMap ;
+                                 rr:objectMap  [ a            rr:ObjectMap , rr:TermMap ;
+                                                 rr:template  "http://www.semanticweb.org/teo/ontologies/2020/0/untitled-ontology-18#{ha_visto_censura}" ;
+                                                 rr:termType  rr:IRI
+                                               ] ;
+                                 rr:predicate  AssisTV:ha_visto_censura
+                               ] ;
+        rr:predicateObjectMap  [ a             rr:PredicateObjectMap ;
+                                 rr:objectMap  [ a            rr:ObjectMap , rr:TermMap ;
+                                                 rr:column    "minuti" ;
+                                                 rr:termType  rr:Literal
+                                               ] ;
+                                 rr:predicate  AssisTV:ha_m
+                               ] ;
+        rr:predicateObjectMap  [ a             rr:PredicateObjectMap ;
+                                 rr:objectMap  [ a            rr:TermMap , rr:ObjectMap ;
+                                                 rr:column    "durata" ;
+                                                 rr:datatype  xsd:integer ;
+                                                 rr:termType  rr:Literal
+                                               ] ;
+                                 rr:predicate  AssisTV:ha_durata
+                               ] ;
+        rr:predicateObjectMap  [ a             rr:PredicateObjectMap ;
+                                 rr:objectMap  [ a            rr:TermMap , rr:ObjectMap ;
+                                                 rr:template  "http://www.semanticweb.org/teo/ontologies/2020/0/untitled-ontology-18#{è_trasmesso_su}" ;
+                                                 rr:termType  rr:IRI
+                                               ] ;
+                                 rr:predicate  AssisTV:è_trasmesso_su
+                               ] ;
+        rr:predicateObjectMap  [ a             rr:PredicateObjectMap ;
+                                 rr:objectMap  [ a            rr:ObjectMap , rr:TermMap ;
+                                                 rr:column    "ora" ;
+                                                 rr:termType  rr:Literal
+                                               ] ;
+                                 rr:predicate  AssisTV:ha_o
+                               ] ;
+        rr:subjectMap          [ a            rr:TermMap , rr:SubjectMap ;
+                                 rr:class     AssisTV:News_e_Approfondimento ;
+                                 rr:template  "http://www.semanticweb.org/teo/ontologies/2020/0/untitled-ontology-18#{nome}" ;
+                                 rr:termType  rr:IRI
+                               ] .
